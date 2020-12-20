@@ -6,6 +6,11 @@ defmodule Github do
   IO.puts "test github repo"
   end
 
+  defp close do
+    IO.puts "goobye"
+  end
+
+
 end
 
 
