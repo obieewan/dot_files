@@ -18,3 +18,11 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeToggle<CR>', { noremap = tru
 
 -- this will run the packer.lua script
 require('packer_plugins')
+
+-- Add vimrc config to neovim
+vim.cmd([[
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.config/nvim/.vimrc
+]])
+
