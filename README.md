@@ -5,6 +5,8 @@ Run clean up command to avoid conflicts in setup
 # Linux / Macos (unix)
 ```
 rm -rf ~/.config/nvim
+```
+```
 rm -rf ~/.local/share/nvim
 ```
 
