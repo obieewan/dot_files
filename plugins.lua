@@ -14,6 +14,21 @@ local plugins ={
       },
     },
   },
+
+  -- Install by default LSP
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "tailwindcss",
+        "elixirls",
+        "erlangls",
+        "html",
+        "emmet_ls",
+      },
+    }
+  },
+
   -- In order to modify the `lspconfig` configuration:
   {
     "neovim/nvim-lspconfig",
@@ -49,19 +64,6 @@ local plugins ={
         return require("tailwindcss-colorizer-cmp").formatter(entry, item)
       end
     end,
-  },
-
-  -- Install by default LSP
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "tailwindcss",
-        "elixirls",
-        "erlangls",
-        "html"
-      },
-    }
   },
 }
 
