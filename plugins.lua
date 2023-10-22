@@ -23,17 +23,8 @@ local plugins ={
     end,
   }, 
 
-  {
-    "NvChad/nvim-colorizer.lua",
-    config = function ()
-      require("colorizer").setup({
-        user_default_options = {
-          tailwind = true,
-        },
-      })
-    end,
-  },
 
+  -- Show color swatches in autocomplete
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
