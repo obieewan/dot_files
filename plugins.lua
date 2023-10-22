@@ -8,7 +8,9 @@ local plugins ={
         "css", 
         "elixir",
         "erlang",
-        "javascript"
+        "javascript",
+        "heex",
+        "eex"
       },
     },
   },
@@ -20,6 +22,17 @@ local plugins ={
       require "custom.configs.lspconfig"
     end,
   }, 
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "tailwindcss",
+        "elixirls",
+        "erlangls",
+        "html"
+      },
+    }
+  },
 }
 
 return plugins
