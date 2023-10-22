@@ -23,6 +23,17 @@ local plugins ={
     end,
   }, 
 
+  -- Highlights tailwincss with its color
+  {
+    "NvChad/nvim-colorizer.lua",
+    config = function ()
+      require("colorizer").setup({
+        user_default_options = {
+          tailwind = true,
+        },
+      })
+    end,
+  },
 
   -- Show color swatches in autocomplete
   {
