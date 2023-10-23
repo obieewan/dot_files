@@ -1,9 +1,12 @@
 execute pathogen#infect()
 syntax enable
 filetype plugin indent on
-
-set number 
 set nocompatible
+set hidden
+
+set number
+set relativenumber
+
 
 set tabstop=2
 set shiftwidth=2
@@ -15,9 +18,10 @@ set scrolloff=3
 set autoindent
 set showmode
 set showcmd
-set hidden
+
 set wildmenu
 set wildmode=list:longest
+
 set visualbell
 set cursorline
 set ttyfast
@@ -26,7 +30,6 @@ set backspace=indent,eol,start
 set laststatus=2
 set colorcolumn=120
 set nowrap
-set relativenumber
 set undofile
 
 "set leader key to a comma (,)
