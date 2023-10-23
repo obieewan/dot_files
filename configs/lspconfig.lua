@@ -59,8 +59,29 @@ lspconfig.tailwindcss.setup({
   },
 })
 
+-- emmet LS config
 lspconfig.emmet_ls.setup({
   capabilities = capabilities,
   on_attach = on_attach,
-  filetypes = { "html", "css", "elixir", "eelixir", "heex" },
+  filetypes = {
+    "html", 
+    "css", 
+    "heex", 
+    -- unused html snippet keep on coming in elixir and eex files
+    "elixir", 
+    "eelixir"
+  },
+  init_options = {
+    userLanguages = {
+      elixir = "html-eex",
+      eelixir = "html-eex",
+      heex = "html-eex"
+    },
+    html = {
+      options = {
+        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+        ["bem.enabled"] = true,
+      },
+    },
+  },
 })
