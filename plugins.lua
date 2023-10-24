@@ -69,6 +69,10 @@ local plugins ={
         {
           name = 'buffer',
           option = {
+            -- sets keyword lenght trigger to 1 from default 3
+            keyword_length = 1,
+            --
+            -- gets words from opened buffers
             get_bufnrs = function()
               return vim.api.nvim_list_bufs()
             end

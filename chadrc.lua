@@ -3,6 +3,7 @@ local M = {}
 
 M.ui = { 
   theme = 'solarized_dark',
+  -- triggers tabs
   tabufline = {
     enabled= false
   }
