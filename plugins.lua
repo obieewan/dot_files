@@ -63,6 +63,18 @@ local plugins ={
         format_kinds(entry, item) -- add icons
         return require("tailwindcss-colorizer-cmp").formatter(entry, item)
       end
+
+      -- Make opened buffers words available in autocomplete
+      opts.sources = {
+        {
+          name = 'buffer',
+          option = {
+            get_bufnrs = function()
+              return vim.api.nvim_list_bufs()
+            end
+          }
+        }
+      }
     end,
   },
 }
