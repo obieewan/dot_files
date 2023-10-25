@@ -67,7 +67,6 @@ lspconfig.emmet_ls.setup({
     "html", 
     "css", 
     "heex", 
-    -- unused html snippet keep on coming in elixir and eex files
     "elixir", 
     "eelixir"
   },
