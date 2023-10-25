@@ -11,7 +11,7 @@ M.ui = {
 
 M.plugins = "custom.plugins"
 
---[[
+--[[ added to plugins 
 M.cmp ={
   sources = {
     { name = "buffer",
@@ -20,7 +20,11 @@ M.cmp ={
           return vim.api.nvim_list_bufs()
         end
       }
-    }
+    },
+    { name = "nvim_lsp"  },
+    { name = "path" },
+    { name = "luasnip" },
+    { name = "nvim_lua" },
   }
 }
 ]]

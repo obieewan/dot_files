@@ -57,28 +57,30 @@ local plugins ={
       { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
     },
     opts = function(_, opts)
+      -- Make opened buffers words available in autocomplete
+        local cmp = require("cmp")
+
+      opts.sources ={
+        { name = "buffer",
+          option = {
+            keyword_length = 1,
+            get_bufnrs = function()
+              return vim.api.nvim_list_bufs()
+            end
+          }
+        },
+        { name = "nvim_lsp"  },
+        { name = "path" },
+        { name = "luasnip" },
+        { name = "nvim_lua" },
+      } 
+
       -- original LazyVim kind icon formatter
       local format_kinds = opts.formatting.format
       opts.formatting.format = function(entry, item)
         format_kinds(entry, item) -- add icons
         return require("tailwindcss-colorizer-cmp").formatter(entry, item)
       end
-
-      -- Make opened buffers words available in autocomplete
-      opts.sources = {
-        {
-          name = 'buffer',
-          option = {
-            -- sets keyword lenght trigger to 1 from default 3
-            keyword_length = 1,
-            --
-            -- gets words from opened buffers
-            get_bufnrs = function()
-              return vim.api.nvim_list_bufs()
-            end
-          }
-        }
-      }
     end,
   },
 }
