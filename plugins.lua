@@ -57,9 +57,8 @@ local plugins ={
       { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
     },
     opts = function(_, opts)
-      -- Make opened buffers words available in autocomplete
-        local cmp = require("cmp")
 
+      -- Make opened buffers words available in autocomplete
       opts.sources ={
         { name = "buffer",
           option = {

@@ -8,7 +8,7 @@ vim.api.nvim_set_keymap('n', ',s', '<Cmd>split<CR>', { noremap = true })
 
 -- set relative number and number default upon opening nvim --
 vim.o.relativenumber = true
-vim.o.numer = true
+vim.o.number = true
 
 -- Window resizing
 vim.api.nvim_set_keymap('n', '+', '<C-w>+', { noremap = true })
@@ -27,6 +27,5 @@ vim.api.nvim_set_keymap('i', '<C-j>', '<C-w>j', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-k>', '<C-w>k', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-l>', '<C-w>l', { noremap = true })
 
-
 -- Ruler
-vim.o.ruler = true
+--vim.o.ruler = true
